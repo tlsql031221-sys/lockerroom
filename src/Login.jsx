@@ -21,7 +21,13 @@ function Login() {
   return (
     <div className="flex h-screen items-center justify-center bg-gray-100">
       <div className="w-96 rounded-lg bg-white p-8 shadow-md">
-        <h1 className="mb-6 text-center text-2xl font-bold text-blue-900">LockerRoom</h1>
+        {/* LockerRoom 타이틀 클릭 시 /home으로 이동하도록 수정 */}
+        <h1 
+          className="mb-6 text-center text-2xl font-bold text-blue-900 cursor-pointer hover:opacity-80 transition"
+          onClick={() => navigate("/home")}
+        >
+          LockerRoom
+        </h1>
         <form className="flex flex-col gap-4" onSubmit={handleLogin}>
           <input 
             type="email" 
